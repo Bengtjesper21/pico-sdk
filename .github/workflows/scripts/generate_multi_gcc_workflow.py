@@ -61,7 +61,7 @@ for toolchain in toolchains:
     version = m.group(1)
 
     if version in seen_versions:
-        raise Exception("Already have version {} in versions current path {}, this path {}".format(version, gcc_versions[version], path))
+        raise Exception("Already have version {} in versions current path {}, this path {}".format(version, seen_versions, path))
 
     compilers.append(Compiler(version, toolchain, type))
     seen_versions.append(version)
